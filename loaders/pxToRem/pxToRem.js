@@ -1,5 +1,5 @@
 var postcss = require('postcss');
-module.exports = postcss.plugin('postcss-pxToRem', function(options) {
+module.exports = postcss.plugin('postcss-pxToRem', function (options) {
     var pxreg = /"[^"]+"|'[^']+'|url\([^\)]+\)|(\d*\.?\d+)px/g;
     var defaultObj = {
         rootSize: '37.5',
@@ -8,7 +8,7 @@ module.exports = postcss.plugin('postcss-pxToRem', function(options) {
         whiteTagList: [],
         whiteSelectorList: []
     };
-    return function(root, result) {
+    return function (root, result) {
         // 判断第一个节点是不是 comment 节点
         if (root.nodes[0].type !== 'comment') {
             return;
@@ -17,6 +17,10 @@ module.exports = postcss.plugin('postcss-pxToRem', function(options) {
         var regInfo = /^-{3}\n([\d\D]*)\n-{3}$/.exec(root.nodes[0].text);
         var regtext = null;
         var regobj = {};
+        // 判断是否有符合条件的
+        if (!regInfo) {
+            return;
+        }
         if (regInfo.length !== 2) {
             return;
         }
@@ -28,7 +32,7 @@ module.exports = postcss.plugin('postcss-pxToRem', function(options) {
         });
 
         regobj = Object.assign(defaultObj, regobj);
-        root.walkRules(function(rules, i) {
+        root.walkRules(function (rules, i) {
             var {
                 rootSize,
                 noTransformFlag,
