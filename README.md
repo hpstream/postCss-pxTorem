@@ -23,7 +23,7 @@ px2rem({
 
 ## Install
 ```
-$ npm install postcss-pxtorem --save-dev
+$ cnpm install --save-dev high-pxtorem
 ```
 Usage
 ```
@@ -63,7 +63,7 @@ module.exports = {
                 'not ie < 12'
             ]
         }),
-        require('./loaders/pxToRem/pxToRem.js')({})
+        require('high-pxtorem')({})
 
     ]
 };
