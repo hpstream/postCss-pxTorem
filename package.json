@@ -1,9 +1,13 @@
 {
-  "name": "pxToRem",
-  "version": "1.0.0",
+  "name": "high-pxtorem",
+  "version": "1.0.1",
   "main": "./loaders/pxToRem/pxToRem.js",
   "description": "一个超级好用的pxtorem", 
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hpstream/postCss-pxTorem.git"
+  },
   "scripts": {
     "lint": "eslint --fix  --ext .js,.vue src",
     "watch": "webpack --progress --watch",
