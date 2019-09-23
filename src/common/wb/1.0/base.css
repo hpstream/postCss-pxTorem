@@ -1,0 +1,109 @@
+body,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: "PingFangSC-Regular", "Microsoft YaHei", "微软雅黑";
+  padding-top: constant(safe-area-inset-top);
+  padding-left: constant(safe-area-inset-left);
+  padding-right: constant(safe-area-inset-right);
+}
+
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  font-family: "PingFangSC-Regular", "Microsoft YaHei", "微软雅黑";
+}
+
+input {
+  line-height: normal;
+}
+
+label>* {
+  pointer-events: none;
+}
+
+input,
+select,
+textarea {
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input,
+textarea {
+  contenteditable: true;
+  -webkit-user-select: text;
+}
+
+a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+a,
+a:focus,
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  border: 0;
+}
+
+.prevent-select {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.part-scroll {
+  overflow: auto;
+  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+}
+
+.userSelectNone {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+
+
+
+
+
+
+
+
+
