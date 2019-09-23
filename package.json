@@ -1,7 +1,8 @@
 {
-  "name": "web3",
+  "name": "pxToRem",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./loaders/pxToRem/pxToRem.js",
+  "description": "一个超级好用的pxtorem", 
   "license": "MIT",
   "scripts": {
     "lint": "eslint --fix  --ext .js,.vue src",
