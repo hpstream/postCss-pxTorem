@@ -10,6 +10,9 @@ module.exports = postcss.plugin('postcss-pxToRem', function (options) {
     };
     return function (root, result) {
         // 判断第一个节点是不是 comment 节点
+        if (!root.nodes[0]) {
+            return;
+        }
         if (root.nodes[0].type !== 'comment') {
             return;
         }
@@ -63,7 +66,11 @@ module.exports = postcss.plugin('postcss-pxToRem', function (options) {
 
                 // 转成rem
                 var newvalue = value.replace(pxreg, (input, val) => {
-                    return `${(val / rootSize).toFixed(toFixed)}rem`;
+                    if (val) {
+                        return `${(val / rootSize).toFixed(toFixed)}rem`;
+                    }
+                    return input;
+
                 });
                 rule.value = newvalue;
             });

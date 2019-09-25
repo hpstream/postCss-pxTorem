@@ -1,6 +1,6 @@
 {
   "name": "high-pxtorem",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "./loaders/pxToRem/pxToRem.js",
   "description": "一个超级好用的pxtorem", 
   "license": "MIT",
