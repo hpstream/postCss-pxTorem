@@ -74,7 +74,6 @@
     "eslint-plugin-html": "^5.0.5",
     "eslint-plugin-vue": "^5.2.2",
     "file-loader": "^2.0.0",
-    "front-common": "git+ssh://git@git.wb-intra.com:web_group/front-common.git",
     "happypack": "^5.0.1",
     "hash-sum": "^1.0.2",
     "html-loader": "^0.5.5",
