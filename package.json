@@ -36,8 +36,6 @@
     "wbWebpack": "./index.js"
   },
   "devDependencies": {
-  },
-  "dependencies": {
     "@babel/core": "^7.0.0",
     "@babel/plugin-proposal-class-properties": "^7.0.0",
     "@babel/plugin-proposal-decorators": "^7.0.0",
@@ -108,6 +106,9 @@
     "webpack-dev-server": "^3.1.8",
     "webpack-merge": "^4.1.4",
     "webpack-parallel-uglify-plugin": "^1.1.0"
+  },
+  "dependencies": {
+    
   },
   "browserslist": [
     "> 0.1%",
