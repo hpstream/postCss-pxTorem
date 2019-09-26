@@ -26,7 +26,7 @@ px2rem({
 $ cnpm install --save-dev high-pxtorem
 ```
 Usage
-```
+```css
 /*
 ---
 rootSize:37.5,
@@ -44,11 +44,17 @@ body {
   }
 }
 
-body{width:2.666667rem;border:.026667rem solid red}body a{border:1rem solid wheat}
+body{
+  width:2.666667rem;
+  border:.026667rem solid red
+  }
+body a{
+  border:1rem solid wheat
+}
 ```
 
 ## Example
-```
+```js
 // postcss.config.js
 module.exports = {
     syntax: require('postcss-less'),//此处可以换
@@ -71,7 +77,7 @@ module.exports = {
 ```
 
 ## options
-```
+```js
  var defaultObj = {
         rootSize: '37.5',// 与html font-size相同
         noTransformFlag: '-no-',// 此注释前面不进行rem转义
