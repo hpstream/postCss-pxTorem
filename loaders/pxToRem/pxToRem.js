@@ -8,6 +8,7 @@ module.exports = postcss.plugin('postcss-pxToRem', function (options) {
         whiteTagList: [],
         whiteSelectorList: []
     };
+
     return function (root, result) {
         // 判断第一个节点是不是 comment 节点
         if (!root.nodes[0]) {
@@ -16,8 +17,11 @@ module.exports = postcss.plugin('postcss-pxToRem', function (options) {
         if (root.nodes[0].type !== 'comment') {
             return;
         }
+
         // 判断节点是不是---\n XXXX \n--- 模式
-        var regInfo = /^-{3}\n([\d\D]*)\n-{3}$/.exec(root.nodes[0].text);
+        var text = root.nodes[0].text.replace(/[\r\n]/g, "");
+        var regInfo = /^-{3}([\d\D]*)-{3}$/.exec(text);
+        console.log(regInfo);
         var regtext = null;
         var regobj = {};
         // 判断是否有符合条件的
