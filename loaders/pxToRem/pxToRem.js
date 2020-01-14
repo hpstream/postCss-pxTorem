@@ -21,7 +21,7 @@ module.exports = postcss.plugin('postcss-pxToRem', function (options) {
         // 判断节点是不是---\n XXXX \n--- 模式
         var text = root.nodes[0].text.replace(/[\r\n]/g, "");
         var regInfo = /^-{3}([\d\D]*)-{3}$/.exec(text);
-        console.log(regInfo);
+        // console.log(regInfo);
         var regtext = null;
         var regobj = {};
         // 判断是否有符合条件的
